@@ -34,6 +34,7 @@ a:hover {
 
 body {
   margin: 0;
+  padding: 0;
   /*display: flex;
   place-items: center;
   min-width: 320px;
@@ -66,8 +67,10 @@ button:focus-visible {
 
 
 #app {
-  max-width: 1280px;
-  padding: 2rem;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  /*padding: 2rem;*/
   text-align: center;
   overflow: hidden;
   display: flex;
@@ -91,13 +94,31 @@ button:focus-visible {
 }
 
 .column {
-  width: 50%;
-  height: 100%;
+  margin: 5%;
+  width: 40%;
+  height: 80%;
   display: inline;
   float:left;
   display: flex;
   align-items: center;
   flex-direction: column;
+  background-color: #4b4b4b62;
+  border-radius: 10px;
+  overflow: auto;
+}
+
+.column h1 {
+  position: fixed;
+  text-transform: uppercase;
+}
+
+.cells {
+  margin-top: 10rem;
+  width: 100%;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .cell {
@@ -105,11 +126,18 @@ button:focus-visible {
   width: 100px;
   margin: 5px;
   font-weight: bold;
-  display: flex;
-  justify-content: center;
-  align-items: center; 
+  display: inline;
+  float: left;
   text-transform: uppercase;
   transition: .2s background-color;
+  overflow: hidden;
+  word-break: break-all;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cell:hover {
+  animation: tilt-shaking .15s ease-in-out;
 }
 
 .cell.active {
@@ -121,6 +149,14 @@ button:focus-visible {
 }
 
 .cell p {
+  text-overflow: ellipsis;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   animation: showName .2s ease-in-out;
   user-select: none;
 }
@@ -132,4 +168,12 @@ button:focus-visible {
   100%{
     opacity: 1;
   }
+}
+
+@keyframes tilt-shaking {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
 }
