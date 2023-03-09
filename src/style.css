@@ -127,8 +127,8 @@ button:focus-visible {
 }
 
 .cell {
-  height: 100px;
-  width: 100px;
+  height: 75px;
+  width: 75px;
   margin: 5px;
   font-weight: bold;
   display: inline;
@@ -139,6 +139,7 @@ button:focus-visible {
   white-space: break-spaces;
   border-radius: 5px;
   cursor: pointer;
+  font-size: .8rem;
 }
 
 .cell:hover {
