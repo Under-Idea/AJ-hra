@@ -115,6 +115,7 @@ button:focus-visible {
   position: fixed;
   text-transform: uppercase;
   z-index: 1;
+  padding: 4px;
 }
 
 .cells {
@@ -139,7 +140,7 @@ button:focus-visible {
   white-space: break-spaces;
   border-radius: 5px;
   cursor: pointer;
-  font-size: .8rem;
+  font-size: 70%;
 }
 
 .cell:hover {
