@@ -23,8 +23,30 @@
 export default {
   data() {
     return {
-      who: [{name : "Neighbour", hidden : true}, {name : "House", hidden : true}, {name : "Mouse", hidden : true}, {name : "Mouse", hidden : true}, {name : "Mouse", hidden : true}, {name : "Mouse", hidden : true}, {name : "Mouse", hidden : true}, {name : "Mouse", hidden : true}, {name : "Mouse", hidden : true}, {name : "Mouse", hidden : true}],
-      verb: [{name : "Finding", hidden : true}, {name : "trying", hidden : true}, {name : "parting", hidden : true}],
+      who: [
+        {name : "Neighbour", hidden : true},
+        {name : "Cleaner", hidden : true},
+        {name : "Garbage collector", hidden : true},
+        {name : "Teacher", hidden : true},
+        {name : "Doctor", hidden : true},
+        {name : "Seller", hidden : true},
+        {name : "Cook", hidden : true},
+        {name : "Writer", hidden : true},
+        {name : "Singer", hidden : true},
+        {name : "Driver", hidden : true}
+      ],
+      verb: [
+        {name : "Find", hidden : true},
+        {name : "try", hidden : true},
+        {name : "parting", hidden : true},
+        {name : "Think", hidden : true},
+        {name : "Say", hidden : true},
+        {name : "Do", hidden : true},
+        {name : "Make", hidden : true},
+        {name : "Know", hidden : true},
+        {name : "Take", hidden : true},
+        {name : "Get", hidden : true}
+      ],
       Choosing: "who",
     };
   },

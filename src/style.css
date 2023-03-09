@@ -108,6 +108,7 @@ button:focus-visible {
 }
 
 .column h1 {
+  width: 40%;
   position: fixed;
   text-transform: uppercase;
 }
@@ -137,7 +138,7 @@ button:focus-visible {
 }
 
 .cell:hover {
-  animation: tilt-shaking .15s ease-in-out;
+  animation: tilt-shaking .22s ease-in-out;
 }
 
 .cell.active {
@@ -172,8 +173,8 @@ button:focus-visible {
 
 @keyframes tilt-shaking {
   0% { transform: rotate(0deg); }
-  25% { transform: rotate(5deg); }
+  25% { transform: rotate(7deg); }
   50% { transform: rotate(0deg); }
-  75% { transform: rotate(-5deg); }
+  75% { transform: rotate(-7deg); }
   100% { transform: rotate(0deg); }
 }
