@@ -2,7 +2,7 @@
   <div class="column">
     <h1>Who</h1>
     <div class="cells">
-      <div class="cell" v-for="item in who" v-on:click="handleClick(item, 'who', $event)" :class="item.hidden === false ? 'active' : 'non-active'">
+      <div class="cell" v-for="item in who" v-on:click="handleClick(item, 'who', $event)" :class="[item.hidden === false ? 'active' : 'non-active', (item.hidden === false && item.name !== active_who) ? 'alreadybeen' : '']">
         <p v-if="!item.hidden">{{ item.name }}</p>
         <p v-if="item.hidden">?</p>
       </div>
@@ -11,7 +11,7 @@
   <div class="column">
     <h1>What is he/she doing</h1>
     <div class="cells">
-      <div class="cell" v-for="item in verb" v-on:click="handleClick(item, 'verb', $event)" :class="item.hidden === false ? 'active' : 'non-active'">
+      <div class="cell" v-for="item in verb" v-on:click="handleClick(item, 'verb', $event)" :class="[item.hidden === false ? 'active' : 'non-active', (item.hidden === false && item.name !== active_verb) ? 'alreadybeen' : '']">
         <p v-if="!item.hidden">{{ item.name }}</p>
         <p v-if="item.hidden">?</p>
       </div>
@@ -48,14 +48,21 @@ export default {
         {name : "Get", hidden : true}
       ],
       Choosing: "who",
+      active_who : "",
+      active_verb : ""
     };
   },
   methods: {
     handleClick(item, choosed, event) {
       if(choosed === this.Choosing) {
         if(item.hidden) {
-          this.Choosing = (choosed === "who") ? "verb" : "who"
-          console.log(this.Choosing)
+          if(choosed === "who") {
+            this.Choosing = "verb"
+            this.active_who = item.name
+          } else if(choosed === "verb") {
+            this.Choosing = "who"
+            this.active_verb = item.name
+          }
         }
         item.hidden = false
       }

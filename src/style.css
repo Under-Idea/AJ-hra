@@ -108,6 +108,7 @@ button:focus-visible {
 }
 
 .column h1 {
+  white-space: break-spaces;
   width: 40%;
   position: fixed;
   text-transform: uppercase;
@@ -130,9 +131,9 @@ button:focus-visible {
   display: inline;
   float: left;
   text-transform: uppercase;
-  transition: .2s background-color;
+  transition: .2s background-color opacity;
   overflow: hidden;
-  word-break: break-all;
+  white-space: break-spaces;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -143,6 +144,10 @@ button:focus-visible {
 
 .cell.active {
   background-color: rgb(16, 168, 16);
+}
+
+.cell.alreadybeen {
+  opacity: .4;
 }
 
 .cell.non-active {
