@@ -34,7 +34,7 @@ export default {
         {name : "Writer", hidden : true},
         {name : "Singer", hidden : true},
         {name : "Driver", hidden : true}
-      ],
+      ].sort((a, b) => 0.5 - Math.random()),
       verb: [
         {name : "Find", hidden : true},
         {name : "try", hidden : true},
@@ -46,7 +46,7 @@ export default {
         {name : "Know", hidden : true},
         {name : "Take", hidden : true},
         {name : "Get", hidden : true}
-      ],
+      ].sort((a, b) => 0.5 - Math.random()),
       Choosing: "who",
       active_who : "",
       active_verb : ""
