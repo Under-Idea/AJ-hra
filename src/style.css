@@ -109,13 +109,16 @@ button:focus-visible {
 
 .column h1 {
   white-space: break-spaces;
-  width: 40%;
+  border-radius: 5px;
+  background-color: #1a1a1a94;
+  width: 35%;
   position: fixed;
   text-transform: uppercase;
+  z-index: 1;
 }
 
 .cells {
-  margin-top: 10rem;
+  margin-top: 7rem;
   width: 100%;
   flex-wrap: wrap;
   display: flex;
