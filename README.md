@@ -2,4 +2,4 @@
 
 Velmi malý project
 
-_ lze najít na stránce https://aj-hra.netlify.app _
+_lze najít na stránce https://aj-hra.netlify.app_
