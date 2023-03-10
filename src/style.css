@@ -130,7 +130,7 @@ button:focus-visible {
 .cell {
   height: 75px;
   width: 75px;
-  margin: 5px;
+  margin: 10px;
   font-weight: bold;
   display: inline;
   float: left;
